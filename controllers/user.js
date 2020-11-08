@@ -18,9 +18,10 @@ async function login(user) {
         requestedUser.password
       );
       if (isValid) {
-        delete user.password;
-        user.token = auth.createToken(user);
-        response.user = user;
+        delete requestedUser.password;
+        delete requestedUser._id;
+        let token = auth.createToken(requestedUser);
+        response.user = token;
       } else response.valid = false;
     }
     else response.valid = false;

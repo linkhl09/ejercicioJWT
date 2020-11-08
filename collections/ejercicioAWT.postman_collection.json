@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "2b14ee16-72cf-4bbe-b791-d91db3dc4b94",
+		"name": "ejercicioAWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\",\r\n    \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"wannaBe\",\r\n    \"password\": \"wannaBe\",\r\n    \"role\": \"wannaBe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"normie\",\r\n    \"password\": \"normie\",\r\n    \"role\": \"normie\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginAdmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginNormie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"normie\",\r\n    \"password\": \"normie\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				},
+				"description": "Cualquier usuario puede obtener los productos"
+			},
+			"response": []
+		},
+		{
+			"name": "Create product Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjA0ODExMTUyLCJleHAiOjE2MDQ4MTQ3NTJ9.FFwkvGpKPf3GYG8UFfPj8Xt0lU19tQCPcNmK6MM_sd0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\": \"1\",\r\n    \"nombreProducto\": \"Té de frutos rojos\",\r\n    \"idProveedor\": \"1\",\r\n    \"idCategoria\": \"1\",\r\n    \"cantidadPorUnidad\": \"10 cajas x 20 bolsas\",\r\n    \"precioUnidad\": \"18\",\r\n    \"unidadesEnExistencia\": \"39\",\r\n    \"unidadesEnPedido\": \"0\",\r\n    \"nivelNuevoPedido\": \"10\",\r\n    \"suspendido\": \"0\",\r\n    \"categoriaProducto\": \"Categoria D\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				},
+				"description": "Must have token with admin role"
+			},
+			"response": []
+		},
+		{
+			"name": "Create product normie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjA0ODExMTUyLCJleHAiOjE2MDQ4MTQ3NTJ9.FFwkvGpKPf3GYG8UFfPj8Xt0lU19tQCPcNmK6MM_sd0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\": \"1\",\r\n    \"nombreProducto\": \"Té de frutos rojos\",\r\n    \"idProveedor\": \"1\",\r\n    \"idCategoria\": \"1\",\r\n    \"cantidadPorUnidad\": \"10 cajas x 20 bolsas\",\r\n    \"precioUnidad\": \"18\",\r\n    \"unidadesEnExistencia\": \"39\",\r\n    \"unidadesEnPedido\": \"0\",\r\n    \"nivelNuevoPedido\": \"10\",\r\n    \"suspendido\": \"0\",\r\n    \"categoriaProducto\": \"Categoria D\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				},
+				"description": "Must have token with admin role"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
